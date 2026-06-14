@@ -6,7 +6,7 @@ When you normally delete a file or empty the Recycle Bin, the operating system o
 
 `shrsd` acts as a clone of the GNU `shred` utility. It repeatedly overwrites file data in-place with cryptographic noise, flushes the OS disk cache, obfuscates the filename to wipe it from the Master File Table (MFT), and finally unlinks the file.
 
-## ✨ Features
+## Features
 * **Secure Overwrite:** Overwrites file contents multiple times using cryptographically secure random data (`rand` crate).
 * **MFT Obfuscation:** Renames files and directories iteratively with random characters before deletion to erase traces from the NTFS Master File Table.
 * **Anti-Virus Bypass:** Implements smart back-off/retry loops to prevent "Access Denied" errors caused by Windows Defender locking files the instant they are modified.
